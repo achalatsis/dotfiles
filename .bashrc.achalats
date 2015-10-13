@@ -119,3 +119,12 @@ source ~/.git-prompt.sh
 
 alias docker-env=`eval "$(docker-machine env default)"` 
 
+
+#########################################
+# OS X stuff
+if [[ $OSTYPE == *"darwin"* ]]; then
+	if [ -f $(brew --prefix)/etc/bash_completion ]; then
+		. $(brew --prefix)/etc/bash_completion
+	fi
+fi
+

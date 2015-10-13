@@ -117,7 +117,7 @@ source ~/.git-prompt.sh
 #########################################
 # Docker stuff
 
-alias docker-env=`eval "$(docker-machine env default)"` 
+eval "$(docker-machine env default)"
 
 
 #########################################

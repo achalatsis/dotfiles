@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/space/achalats/ppw/git_src/artifacts'
+let g:netrw_dirhist_2='/space/achalats/ppw/aggregate-settle-bet-feed/docker'
+let g:netrw_dirhist_3='/space/achalats/ppw/aggregate-settle-bet-feed/compiled'
+let g:netrw_dirhist_4='/space/achalats/ppw/aggregate-settle-bet-feed/sources'
+let g:netrw_dirhist_5='/space/achalats/ppw/aggregate-racing-post/sources'
+let g:netrw_dirhist_6='/space/achalats/ppw/aggregate-geolookup/sources'

@@ -186,7 +186,7 @@ execute pathogen#infect()
 
 :so ~/.vim/elflord.vim
 :so ~/.vim/colors/molokai.vim
-colorscheme elflord
+colorscheme molokai
 
 set encoding=utf-8
 

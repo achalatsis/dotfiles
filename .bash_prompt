@@ -15,18 +15,18 @@
 # NOTE colours will just fail silently if not present aside from the intial
 # warning that .bash_colours is missing.
 
-function _padding {
+function _prompt_padding {
     # Creates a string of spaces of the passed size
     local size=$1
     local result
     printf -v result "%${size}s" ' '
     echo "$result"
 }
-function _repeat_chars {
+function _prompt_repeat_chars {
     # Creates a string of <size> repeats of <char>
     local char=$1
     local size=$2
-    local temp_str=$(_padding ${size})
+    local temp_str=$(_prompt_padding ${size})
     echo ${temp_str// /${char}}
 }
 
@@ -37,7 +37,7 @@ if ! __git_ps1 &> /dev/null; then
     }
 fi
 
-function prompt_command {
+function _prompt_command {
     # Must be the first thing we do, otherwise other exit statuses overwrite $?
     local exit_status=$?
     if [[ $exit_status == 0 ]]; then
@@ -120,7 +120,7 @@ function prompt_command {
     local rule
     if [[ ${rule_length} -gt 0 ]]; then
         # Everything fits on the info line
-        rule="${DarkGray}$(_repeat_chars '─' ${rule_length}) "
+        rule="${DarkGray}$(_prompt_repeat_chars '─' ${rule_length}) "
     elif [[ ${rule_length} == 0 ]]; then
         # Everything JUST fits on the info line
         rule=""
@@ -135,4 +135,4 @@ function prompt_command {
     PS1="\n${line_1}\n${line_2}"
 }
 
-prompt_command
+PROMPT_COMMAND="_prompt_command"

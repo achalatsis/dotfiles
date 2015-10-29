@@ -129,3 +129,7 @@ if [[ $OSTYPE == *"darwin"* ]]; then
 fi
 
 export PATH="/usr/local/sbin:$PATH"
+
+## prompt scripts
+source ~/.bash_colors
+source ~/.bash_prompt

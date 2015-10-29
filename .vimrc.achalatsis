@@ -28,6 +28,7 @@ set clipboard=unnamed                                        " yank and paste wi
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set incsearch                                                " search as you type
+set hlsearch                                                 " highlight all results
 set statusline=%F%m%r%h%w\ [format=%{&ff}]\ [type=%Y]\ [ascii=\%03.3b]\ [hex=\%02.2B]\ [pos=%04l,%04v][%p%%]\ [len=%L]
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace

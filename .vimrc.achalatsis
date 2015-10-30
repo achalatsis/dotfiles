@@ -121,13 +121,14 @@ endif
 " Don't copy the contents of an overwritten selection.
 vnoremap p "_dP
 
-" gui settings
+" gui settings, currently everything using dark solarized
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')
-    colorscheme molokai
-  else
-    colorscheme solarized
 	set background=dark
+    colorscheme solarized
+  else
+	set background=dark
+    colorscheme solarized
   endif
 endif
 

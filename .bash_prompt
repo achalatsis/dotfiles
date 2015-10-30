@@ -93,7 +93,7 @@ function _prompt_command {
         git_text=' '
     fi
 
-    local date_text=${DarkGray}$(date +%H:%M)${Color_Off}
+    local date_text=${IBlue}$(date +%H:%M)${Color_Off}
     local prompt_char=${exit_status_text}
     local pwd_text="$(pwd | perl -pe "s|$HOME|~|")"
 
@@ -120,7 +120,7 @@ function _prompt_command {
     local rule
     if [[ ${rule_length} -gt 0 ]]; then
         # Everything fits on the info line
-        rule="${DarkGray}$(_prompt_repeat_chars '─' ${rule_length}) "
+        rule="${BBlue}$(_prompt_repeat_chars '─' ${rule_length}) "
     elif [[ ${rule_length} == 0 ]]; then
         # Everything JUST fits on the info line
         rule=""
@@ -129,7 +129,7 @@ function _prompt_command {
         pwd_text="…${pwd_text:$((${rule_length} * -1))}"
         rule=""
     fi
-    pwd_text=${BBlue}${pwd_text}${Color_Off}
+    pwd_text=${Blue}${pwd_text}${Color_Off}
     local line_1="${pwd_text}${virtual_env_text}${git_text}${rule}${tmux_text}${jobs_text}${date_text}"
     local line_2="\$ "
     PS1="\n${line_1}\n${line_2}"

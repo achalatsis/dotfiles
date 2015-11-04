@@ -130,6 +130,9 @@ fi
 
 export PATH="/usr/local/sbin:$PATH"
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 ## prompt scripts
 source ~/.bash_colors
 source ~/.bash_prompt
